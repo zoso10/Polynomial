@@ -1,11 +1,14 @@
+# Module for arithetic operations
 
+module Polynomial::Operations
 
-module Operations
+	def +(b)
 
-	def +(other)
-		
 	end
 
+	def -(b)
+
+	end
 
 
 end
