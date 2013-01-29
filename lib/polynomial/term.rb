@@ -1,8 +1,10 @@
-
+require_relative "arithmetic.rb"
 
 class Term
+	include Arithmetic
 
-	attr_accessor :coeff, :vars, :degree
+	attr_accessor :coeff, :vars 
+	attr_reader :degree
 
 	def initialize(coeff=1, param={})
 		@vars = param
@@ -11,8 +13,8 @@ class Term
 		self
 	end
 
-	def add_variable(var, power)
-		@vars[var] = power
+	def evaluate(vars)
+
 	end
 
 	def to_s
@@ -22,8 +24,6 @@ class Term
 		end
 		str
 	end
-
-
 
 end
 
