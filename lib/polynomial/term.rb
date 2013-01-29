@@ -1,4 +1,4 @@
-require_relative "arithmetic.rb"
+require_relative 'arithmetic.rb'
 
 class Term
 	include Arithmetic
@@ -13,8 +13,12 @@ class Term
 		self
 	end
 
-	def evaluate(vars)
-
+	def evaluate(values)
+		if @vars.keys.sort == values.keys.sort
+			temp = @coeff
+			values.each{ |k, v| temp *= (values[k] ** @vars[k]) }
+			temp
+		end
 	end
 
 	def to_s
@@ -26,4 +30,3 @@ class Term
 	end
 
 end
-
