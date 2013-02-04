@@ -1,7 +1,9 @@
-require_relative 'arithmetic.rb'
+require_relative 'term/arithmetic'
+require_relative 'term/calculus'
 
 class Term
 	include Arithmetic
+	include Calculus
 
 	attr_accessor :coeff, :vars 
 	attr_reader :degree
